@@ -1,0 +1,41 @@
+/**
+ * Work Style
+ */
+/* line 6, opaljob.scss */
+.work-types .work-type-item {
+  display: inline-block;
+  padding: 3px 6px;
+  background: #CCC;
+  font-size: 11px;
+  margin: 0 3px;
+}
+
+/* line 15, opaljob.scss */
+.work-meta > div {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 95%;
+}
+
+/* line 22, opaljob.scss */
+.work-list {
+  clear: both;
+  border-bottom: solid 1px #CCC;
+  padding: 15px 0;
+}
+/* line 23, opaljob.scss */
+.work-list .work-thumbnail {
+  width: 100px;
+  float: left;
+  margin-right: 20px;
+}
+/* line 28, opaljob.scss */
+.work-list .work-content {
+  overflow: hidden;
+}
+/* line 34, opaljob.scss */
+.work-list .work-types {
+  position: absolute;
+  top: 10%;
+  right: 0;
+}

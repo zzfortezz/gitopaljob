@@ -1,0 +1,39 @@
+/**
+ * Work Style
+ */
+// elements 
+.work-types{
+    .work-type-item {
+        display:inline-block;
+        padding:3px 6px;
+        background: #CCC;
+        font-size: 11px;
+        margin:0 3px;
+    }
+}
+.work-meta{
+    & > div{
+        display: inline-block;
+        margin-right:6px;
+        font-size:95%;
+    }
+}
+// list style
+.work-list{
+    .work-thumbnail{
+        width:100px;
+        float:left;
+        margin-right: 20px;
+    }
+    .work-content{
+        overflow: hidden;
+    }
+    clear: both;
+    border-bottom:solid 1px #CCC;
+    padding:15px 0;
+    .work-types{
+        position: absolute;
+        top:10%;
+        right:0;
+    }
+}

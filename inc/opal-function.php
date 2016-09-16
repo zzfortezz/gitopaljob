@@ -98,7 +98,7 @@ Class Opal_Theme_Action extends Opal_Base{
             $fileID = $_POST["fileID"];
             $imgType = $fileID;
             // check ajax nonce
-            if (!check_ajax_referer($imgType . '_opal_uploader', false, false) ) {
+            if (!check_ajax_referer($imgType . '_uploader', false, false) ) {
                 $res['msg'] = __('Security error!', 'opaljob');
             } elseif (isset($_FILES[$fileID])) {
                 //
@@ -119,6 +119,7 @@ Class Opal_Theme_Action extends Opal_Base{
                     	if ($_FILES[$fileID]['type'] =="application/pdf") {
                     		$attach_data['title'] = get_the_title( $attach_id );
                     		$attach_data['type'] = "pdf";
+                            $attach_data['id'] = $attach_id;
                     	}else{
                     		$attach_data = wp_get_attachment_metadata($attach_id);
                     	}

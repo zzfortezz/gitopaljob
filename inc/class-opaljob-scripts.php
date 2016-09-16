@@ -42,7 +42,9 @@ class Opaljob_Scripts{
             'nonce' => wp_create_nonce('aaiu_allow'),
         ), admin_url('admin-ajax.php') ); 
 
-        
+        if(is_singular('opaljob_work')){
+            wp_enqueue_script("opaljob-submission", OPALJOB_PLUGIN_URL . 'assets/js/submission.js', array( 'jquery' ), "1.0.0", true);
+        }
         wp_enqueue_script("google-map-api", "//maps.google.com/maps/api/js?sensor=false&amp;key=AIzaSyA-XBs8xkUbYA0ykeWNnxWRP8SMOSQHFW8&amp;language=en", null, "0.0.1", false);
 
         wp_enqueue_script("jquery-ui", OPALJOB_PLUGIN_URL . 'assets/js/jquery-ui.min.js', array( 'jquery' ), "3.3", false);
@@ -51,6 +53,7 @@ class Opaljob_Scripts{
         wp_enqueue_script("markerclusterer", OPALJOB_PLUGIN_URL . 'assets/js/markerclusterer.js', array( 'jquery' ), "1.3", false);
         wp_enqueue_style("owl-carousel", OPALJOB_PLUGIN_URL . 'assets/js/owl-carousel/owl.carousel.css', null, "1.3", false);
         wp_enqueue_script("opaljob-scripts", OPALJOB_PLUGIN_URL . 'assets/js/scripts.js', array( 'jquery' ), "1.0.0", true);
+        wp_enqueue_script("blockUi", OPALJOB_PLUGIN_URL . 'assets/js/blockUi.js', array( 'jquery' ), "1.0.0", true);
         wp_localize_script('opaljob-scripts', 'ajaxcalls_vars', 
             array(
                 'login_redirect'        =>  $login_redirect,

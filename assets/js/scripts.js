@@ -49,7 +49,7 @@ jQuery(document).ready(function($){
             return false; 
         });
     } );
-    // apply send email
+  /*  // apply send email
     $('form.opaljob-contact-form').submit(function(e){
         e.preventDefault();
         if($('.opaljob-contact-form .create-resume').length >0 ) {
@@ -122,7 +122,7 @@ jQuery(document).ready(function($){
         });
 
         return false;
-    });
+    });*/
     // update my profile
     $('form.opaljob-my-profile').submit(function(){
 

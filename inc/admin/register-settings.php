@@ -67,8 +67,9 @@ class Opaljob_Plugin_Settings {
 
 	public function admin_menu() {
 		//Settings
-	 	$give_settings_page = add_submenu_page( 'edit.php?post_type=opaljob_work', __( 'Settings', 'opaljob' ), __( 'Settings', 'opaljob' ), 'manage_options', 'opaljob-settings', 
-	 		array( $this, 'admin_page_display' ) );
+	 	//$give_settings_page = add_submenu_page( 'edit.php?post_type=opaljob_work', __( 'Settings', 'opaljob' ), __( 'Settings', 'opaljob' ), 'manage_options', 'opaljob-settings', 	array( $this, 'admin_page_display' ) );
+		$setting_page = add_menu_page( "Opaljob Setting", "Opaljob Setting", 'manage_options', "opaljob-settings", array( $this, 'admin_page_display' ) , 'dashicons dashicons-admin-tools', 9 );
+
 	 	
 	}
 
@@ -355,7 +356,7 @@ class Opaljob_Plugin_Settings {
 							'default' => get_bloginfo( 'admin_email' ),
 							'type'    => 'text'
 						),
-						array(
+						/*array(
 							'name' => __( 'Email Settings (Submit A Submission Completed)', 'opaljob' ),
 							'desc' => '<hr>',
 							'id'   => 'opaljob_title_email_settings_2',
@@ -393,7 +394,22 @@ class Opaljob_Plugin_Settings {
 							'default' => '',
 							'type'    => 'textarea'
 						),
-
+						*/
+						array(
+							'id'          => 'wiki_test_repeat_group',
+						    'type'        => 'group',
+						     'options'     => array(
+        'group_title'   => __( 'Entry {#}', 'cmb2' ),),
+						    'repeatable'	=> false,
+						    'description' => __( 'Group nay de chen mail', 'opaljob' ),
+						    'fields'	  => array(
+						    	array(
+						    		'name' => __('Email Settings (Sent Contact Aplly Form)', 'opaljob' ),
+									'id'   => 'ttttt',
+									'type' => 'text'
+						    		),
+						    	),
+							),
 						array(
 							'name' => __( 'Email Settings (Sent Contact Aplly Form)', 'opaljob' ),
 							'desc' => '<hr>',
